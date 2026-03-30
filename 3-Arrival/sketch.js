@@ -15,7 +15,7 @@ function setup() {
   target = createVector(random(width), random(height));
 
   // on cree des vehicules, autant que de points
-  creerVehicules(1);
+  creerVehicules(2);
 }
 
 function creerVehicules(n) {

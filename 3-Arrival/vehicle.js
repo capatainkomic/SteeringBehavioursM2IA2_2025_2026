@@ -8,6 +8,8 @@ class Vehicle {
     this.maxSpeed = 4;
     this.maxForce = 0.2;
     this.r = 16;
+
+    // pour arrival
     this.rayonZoneDeFreinage = 100;
 
     // pour comportement wander
@@ -189,13 +191,13 @@ class Vehicle {
     let valueDesiredSpeed = this.maxSpeed;
 
     if (arrival) {
-      // On définit un rayon de 100 pixels autour de la cible
+      // On définit un rayon de freinage de n pixels autour de la cible
       // si la distance entre le véhicule courant et la cible
       // est inférieure à ce rayon, on ralentit le véhicule
       // desiredSpeed devient inversement proportionnelle à la distance
       // si la distance est petite, force = grande
       // Vous pourrez utiliser la fonction P5 
-      // distance = map(valeur, valeurMin, valeurMax, nouvelleValeurMin, nouvelleValeurMax)
+      // v = map(valeur, valeurMin, valeurMax, nouvelleValeurMin, nouvelleValeurMax)
       // qui prend une valeur entre valeurMin et valeurMax et la transforme en une valeur
       // entre nouvelleValeurMin et nouvelleValeurMax
 
