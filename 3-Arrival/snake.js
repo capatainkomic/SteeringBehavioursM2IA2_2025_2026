@@ -57,10 +57,8 @@ class HeadSnake extends Vehicle {
       // Animation sinusoidale de la langue
       let tongueLength = 30 + sin(this.tonguePhase * PI) * 20;
       
-      // Couleur jaune avec transparence
-      stroke("yellow");
-      // opacite
-      
+      // Couleur jaune semi-transparente (HSB : hue=60 = jaune, saturation=100, brightness=100, alpha=180)
+      stroke(60, 100, 100, 180);
       strokeWeight(3);
       
       // Langue fourchue - deux branches
