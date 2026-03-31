@@ -10,7 +10,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  const nbVehicles = 20;
+  const nbVehicles = 1;
   for (let i = 0; i < nbVehicles; i++) {
     let vehicle = new Vehicle(100, 100, imageFusee);
     vehicles.push(vehicle);
@@ -85,7 +85,8 @@ function draw() {
   //background(0, 0, 0, 20);
 
   vehicles.forEach(vehicle => {
-    vehicle.wander();
+    let force =vehicle.wander();
+    vehicle.applyForce(force);
 
     vehicle.update();
     vehicle.show();
